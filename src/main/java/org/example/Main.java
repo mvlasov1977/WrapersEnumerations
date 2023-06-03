@@ -1,5 +1,5 @@
 package org.example;
-
+import org.example.Color;
 public class Main {
     public static void main(String[] args) {
         /*
@@ -42,6 +42,16 @@ public class Main {
         String myStringValue = Double.toString(129.05);
         System.out.println("тип String: " + myStringValue);
 
+        System.out.println();
+        /*
+        Enum: Створити Enum Color, який буде зберегіати в собі перечислення кольорів.
+              перевизначити для констант toString()
+              та додати метод який повертає код кольору в форматі HEX(RGB)
+              Переробити клас Shape з дз 7, щоб він містив колір в форматы нашого нового Enum Color
+         */
 
+        for (Color myColor: Color.values()) {
+            System.out.println(myColor + " - " + myColor.getHexRGB() + " - " + myColor.name());
+        }
     }
 }
